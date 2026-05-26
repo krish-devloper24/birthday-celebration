@@ -19,6 +19,7 @@ A beautiful and interactive Birthday Celebration Website built using HTML, CSS, 
 - JavaScript
 
 ## 📂 Project Structure
+ https://krish-devloper24.github.io/birthday-celebration/
 
 ```
 premium-birthday-celebration-website/
