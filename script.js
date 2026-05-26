@@ -1,27 +1,30 @@
+
 function celebrate(){
 
-    let name = document.getElementById("name").ariaValueMax;
+let name=document.getElementById("name").value;
 
-    if(name ==""){
-        alert("Enter Name first");
-        return;
-    }
+if(name===""){
+alert("Enter Name");
+return;
+}
 
-    document.getElementById("message").innerHTML = "Happy Birthday" + name + "!";
+document.getElementById("msg").innerHTML=
+"🎉 Happy Birthday " + name + " 🎂";
 
-    // Play music
-    document.getElementById("music").onplay();
+for(let i=0;i<50;i++){
 
-    //confetti
-    for(let i=0; i<100; i++){
+let fw=document.createElement("div");
 
-        let confetti = document.createElement("div");
-        confetti.classList.add("confetti");
+fw.className="firework";
+fw.innerHTML="🎆";
 
-        confetti.style.left = Math.random() * 100 + "vw";
-        confetti.style.background="hsl("+Math.random() * 360 + ", 100%, 50%)";
-        
-        confetti.style.animationDuration = (Math.random()*3+2)+"s";
-        document.body.appendChild(confetti);
-    }
+fw.style.left=Math.random()*100+"vw";
+fw.style.top=Math.random()*100+"vh";
+
+document.body.appendChild(fw);
+
+setTimeout(()=>{
+fw.remove();
+},2000);
+}
 }
